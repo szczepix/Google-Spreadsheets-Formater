@@ -8,6 +8,12 @@ function onOpen() {
       menu.addItem('kg.', 'formatKg');
       menu.addSeparator();
       menu.addItem('L', 'formatLt');
+      menu.addSeparator();
+      menu.addItem('h', 'formatHour');
+      menu.addSeparator();
+      menu.addItem('min.', 'formatMin');
+      menu.addSeparator();
+      menu.addItem('sec.', 'formatSec');
       menu.addToUi();
 }
 
@@ -28,6 +34,21 @@ function formatKg() {
 
 function formatLt() {
   var format = "#,##0\" L\";[Red]\"negative\";_(* \"\"??_);_(@_)";
+  formatSelectedArea(format);
+}
+
+function formatHour() {
+  var format = "#,##0\" h\";[Red]\"negative\";_(* \"\"??_);_(@_)";
+  formatSelectedArea(format);
+}
+
+function formatMin() {
+  var format = "#,##0\" min.\";[Red]\"negative\";_(* \"\"??_);_(@_)";
+  formatSelectedArea(format);
+}
+
+function formatSec() {
+  var format = "#,##0\" sec.\";[Red]\"negative\";_(* \"\"??_);_(@_)";
   formatSelectedArea(format);
 }
 
